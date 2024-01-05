@@ -11,8 +11,8 @@ body {
 }
 
 form {
-  width: 100%;
   display: flex;
+  width: 100%;
   column-gap: 10px;
 }
 
@@ -32,11 +32,12 @@ button {
   width: 100px;
   height: 35px;
   background-color: #3498db;
-  color: white;
+  color: #fff;
+  cursor: pointer;
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: #047ecf;
 }
 
 ul {
@@ -48,7 +49,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px dotted lightgray;
   padding-bottom: 7px;
   margin-bottom: 7px;
+  border-bottom: 1px dotted lightgrey;
 }
