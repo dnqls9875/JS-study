@@ -10,18 +10,9 @@ body {
   box-sizing: border-box;
 }
 
-form {
-  display: flex;
-  justify-content: center;
-  column-gap: 10px;
-  width: 100%;
-  height: 50px;
-}
-
 input,
 button {
   background-color: transparent;
-  border: 1px solid #eee;
   border-radius: 8px;
   outline: none;
 }
@@ -50,16 +41,6 @@ a {
   color: inherit;
 }
 
-.input-box {
-  display: flex;
-}
-
-.console-btn {
-  width: 150px;
-  background-color: #3498db;
-  color: white;
-}
-
 ul {
   margin: 20px 10px;
 }
@@ -73,6 +54,39 @@ li {
   margin-bottom: 7px;
 }
 
-.active {
-  border: 1px solid #000;
+.form {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  width: 100%;
+  height: 50px;
+}
+
+.input {
+  display: flex;
+}
+
+.input:required {
+  border: 1px solid #eee;
+  font-size: 13px;
+  line-height: 1;
+  color: #000;
+}
+.input:valid {
+  border-color: #000;
+}
+
+.input:valid + .console-btn {
+  border-color: #000;
+}
+
+.console-btn {
+  border: 1px solid #eee;
+  width: 150px;
+  background-color: #3498db;
+  color: white;
+}
+
+.console-btn:hover {
+  background-color: #6ebcf0;
 }
