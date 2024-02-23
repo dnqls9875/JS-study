@@ -1,17 +1,21 @@
-/**
- * 수정사항
- * 1. form으로 하지 말고, 단순 div로 하여 click 이벤트로 해보기
- * 2. 내용 입력시 보더 컬러 #000 입력 안할 시 #eee
- * 3. 해당 속성의 값 추가
- */
+const form = document.querySelector(".form");
+const input = document.querySelector(".input");
+const ul = document.querySelector("ul");
 
-const input = document.querySelector("#inputText");
-const addBtn = document.querySelector("#addBtn");
+const addItem = (event) => {
+  // 새로고침 방지 코드
+  event.preventDefault();
 
-function addItem() {
-  const value = input.value || input.placeholder;
-  input.value = "";
-  console.log(value);
-}
+  const value = input.value;
+  const li = document.createElement("li");
+  ul.appendChild(li);
 
-addBtn.addEventListener("click", addItem);
+  if (value !== "") {
+    li.innerText = `${"텍스트 내용: "} ${value}`;
+    input.value = "";
+  } else {
+    li.innerText = input.placeholder;
+  }
+};
+
+form.addEventListener("submit", addItem);
