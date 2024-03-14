@@ -1,0 +1,116 @@
+@layer layout.header {
+  .header__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.2rem 0;
+    padding: 2.2rem 0 1.4rem;
+    align-items: center;
+    > *:nth-child(odd) {
+      justify-self: start;
+    }
+    > *:nth-child(even) {
+      justify-self: end;
+    }
+  }
+
+  .login-setting {
+    border: 0.1rem solid var(--graydd);
+    display: inline-flex;
+    & a {
+      padding: 0 1.5rem;
+      line-height: 2rem;
+      font-size: 1.5rem;
+      color: var(--gray5e);
+      background-color: var(--grayf8);
+      + a {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0%;
+          top: 50%;
+          height: 1rem;
+          border-right: 0.1rem solid var(--grayb8);
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  .utillity {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+  }
+
+  .utillity__list {
+    display: flex;
+    align-items: center;
+
+    & a {
+      padding: 0 1rem;
+      font-size: 1.5rem;
+      color: var(--gray26);
+    }
+
+    & li {
+      position: relative;
+      + li {
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          height: 1rem;
+          border-right: 0.1rem solid var(--grayb8);
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+  .global-nav {
+    padding: 0 0 0 1rem;
+    width: 9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--gray26);
+
+    &::after {
+      content: "\F282";
+      font-family: var(--icon);
+      font-size: 1rem;
+    }
+  }
+
+  .header__sid-nav {
+    & ul {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    & a {
+      font-size: 1.8rem;
+      color: var(--gray26);
+      font-weight: 500;
+    }
+  }
+
+  .gnb {
+    border-top: 0.1rem solid var(--grayf8);
+    border-bottom: 0.1rem solid var(--grayf8);
+
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    & a {
+      display: block;
+      line-height: 5rem;
+      font-size: 2rem;
+    }
+  }
+}

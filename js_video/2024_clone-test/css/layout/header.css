@@ -1,0 +1,119 @@
+@layer layout.header {
+  .header__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.2rem 0;
+    padding: 2.2rem 0 1.4rem;
+    align-items: center;
+
+    > *:nth-child(odd) {
+      justify-self: start;
+    }
+    > *:nth-child(even) {
+      justify-self: end;
+    }
+  }
+
+  .utillity {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .global-nav {
+    padding: 0 0 0 1rem;
+    width: 9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--gray5e);
+    font-size: 1.4rem;
+
+    &::after {
+      content: "\F282";
+      font-family: var(--icon);
+      font-size: 1rem;
+    }
+  }
+
+  .utillity__list {
+    display: flex;
+    align-items: center;
+
+    & a {
+      color: var(--gray5e);
+      font-size: 1.4rem;
+      padding: 0 1rem;
+    }
+
+    & li {
+      position: relative;
+      + li {
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 1rem;
+          border-right: 0.1rem solid var(--grayb8);
+        }
+      }
+    }
+  }
+
+  .login-setting {
+    display: inline-flex;
+    border: 0.1rem solid var(--graydd);
+
+    & a {
+      padding: 0 1.5rem;
+      line-height: 2.8rem;
+      font-size: 1.4rem;
+      color: var(--gray5e);
+      background-color: var(--grayf8);
+      + a {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 1rem;
+          border-right: 0.1rem solid var(--grayb8);
+        }
+      }
+    }
+  }
+
+  .header__side-nav {
+    & ul {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    & a {
+      font-size: 1.6rem;
+      color: var(--gray69);
+      font-weight: 600;
+    }
+  }
+
+  .gnb {
+    border-top: 0.1rem solid var(--grayf8);
+    border-bottom: 0.1rem solid var(--grayf8);
+
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    & a {
+      display: block;
+      line-height: 5rem;
+      font-size: 1.7rem;
+    }
+  }
+}

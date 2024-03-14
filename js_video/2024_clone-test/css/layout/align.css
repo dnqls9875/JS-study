@@ -1,0 +1,6 @@
+@layer layer.align {
+  .m0auto {
+    margin: 0 auto;
+    width: 98rem;
+  }
+}

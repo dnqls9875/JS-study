@@ -1,4 +1,4 @@
-@import url(./reset/reset.css);
+@import url(../css/reset/reset.css);
 .hausys-guide {
   position: absolute;
   left: 50%;
@@ -200,4 +200,4 @@
   color: #ababab;
   background-color: #fbfbfb;
   text-align: center;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

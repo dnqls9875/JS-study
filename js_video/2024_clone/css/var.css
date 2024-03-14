@@ -1,0 +1,18 @@
+:root {
+  --black: #000;
+  --green: #0c834b;
+  --lightgreen: #e2ffe9;
+  --blue: #0b6bef;
+  --lightblue: #e2f7ff;
+  --darkblue: #081943;
+  --deepblue: #0e2d91;
+  --gray26: #26282c;
+  --gray5e: #5e5e5e;
+  --grayb8: #b8b8b8;
+  --graye5: #e5e5e5;
+  --grayf7: #f7f7f7;
+  --graydd: #ddd;
+  --grayf8: #f8f8f8;
+
+  --icon: bootstrap-icons;
+}
